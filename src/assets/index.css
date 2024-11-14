@@ -19,67 +19,6 @@ body {
   border-bottom: 1px solid #dfdfdf;
 }
 
-.nav-link {
-  font-size: 17px;
-  font-weight: 600;
-  color: black;
-  margin-right: 30px;
-}
-
-.contect-btn {
-  border: 2px solid #000;
-  box-shadow: none;
-  outline: none;
-  font-size: 17px;
-  font-weight: 600;
-  color: black;
-  padding: 10px 25px;
-  border-radius: 30px;
-}
-
-.banner-footer-wapper {
-  background-color: #1A1A1A;
-  padding: 50px 0;
-}
-
-.go-top {
-  color: #fff;
-  font-size: 15px;
-}
-
-.social-icon-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  justify-content: center;
-}
-.copy-right{
-  font-size: 18px;
-  color: #fff;
-  font-weight: 300;
-}
-.year-copy{
-  font-weight: 600;
-}
-
-/* main section start */
-
-.banner-section-wapper{
-  background-color: #d7d7d7;
-}
-
-.img-responsive{
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-}
-.img-responsive img{
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  object-position: center;
-}
-
 .font-w1{
   font-weight: 100;
 }
@@ -126,4 +65,87 @@ body {
 
 .font-gray{
   color: #909090;
+}
+
+.font-Open-Sans{
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+}
+
+.font-Montserrat{
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+}
+
+.font-Raleway{
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+}
+
+.nav-link {
+  font-size: 17px;
+  font-weight: 600;
+  color: black;
+  margin-right: 30px;
+}
+
+.contect-btn {
+  border: 2px solid #000;
+  box-shadow: none;
+  outline: none;
+  font-size: 17px;
+  font-weight: 600;
+  color: black;
+  padding: 10px 25px;
+  border-radius: 30px;
+}
+
+.banner-footer-wapper {
+  background-color: #1A1A1A;
+  padding: 50px 0;
+}
+
+.go-top {
+  color: #fff;
+  font-size: 15px;
+}
+
+.social-icon-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+}
+.copy-right{
+  font-size: 18px;
+  color: #fff;
+  font-weight: 300;
+}
+.year-copy{
+  font-weight: 600;
+}
+
+/* main section start */
+
+.banner-main-wapper{
+  background-color: #d7d7d7;
+}
+
+.img-responsive{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.img-responsive img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+.text-border-desing{
+  border: 5px solid #000;
+  padding: 15px 50px;
+  font-size: 30px;
+  letter-spacing: 5px;
 }
