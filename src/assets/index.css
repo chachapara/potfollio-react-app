@@ -1,0 +1,129 @@
+html {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.navbar {
+  background-color: #efefef;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.nav-link {
+  font-size: 17px;
+  font-weight: 600;
+  color: black;
+  margin-right: 30px;
+}
+
+.contect-btn {
+  border: 2px solid #000;
+  box-shadow: none;
+  outline: none;
+  font-size: 17px;
+  font-weight: 600;
+  color: black;
+  padding: 10px 25px;
+  border-radius: 30px;
+}
+
+.banner-footer-wapper {
+  background-color: #1A1A1A;
+  padding: 50px 0;
+}
+
+.go-top {
+  color: #fff;
+  font-size: 15px;
+}
+
+.social-icon-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+}
+.copy-right{
+  font-size: 18px;
+  color: #fff;
+  font-weight: 300;
+}
+.year-copy{
+  font-weight: 600;
+}
+
+/* main section start */
+
+.banner-section-wapper{
+  background-color: #d7d7d7;
+}
+
+.img-responsive{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.img-responsive img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+.font-w1{
+  font-weight: 100;
+}
+.font-w2{
+  font-weight: 200;
+}
+.font-w3{
+  font-weight: 300;
+}
+.font-w4{
+  font-weight: 400;
+}
+.font-w5{
+  font-weight: 500;
+}
+.font-w6{
+  font-weight: 600;
+}
+.font-w7{
+  font-weight: 700;
+}
+.font-w8{
+  font-weight: 800;
+}
+.font-w9{
+  font-weight: 900;
+}
+
+.font-size-min{
+  font-size: 40px;
+}
+
+.font-size-big{
+  font-size: 80px;
+}
+
+.font-size-small{
+  font-size: 25px;
+}
+
+.font-black{
+  color: #000;
+}
+
+.font-gray{
+  color: #909090;
+}
