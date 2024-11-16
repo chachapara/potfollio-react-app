@@ -1,5 +1,5 @@
-import React from 'react';
-import { Container, Form, Col, Row } from 'react-bootstrap';
+import { useState } from 'react';
+import { Container, Form, Col, Row, Alert } from 'react-bootstrap';
 import code from '../../assets/images/18941-Photoroom.png'
 import desing from '../../assets/images/desing.png'
 import maintenance from '../../assets/images/maintenance.png'
@@ -10,10 +10,69 @@ import scss from '../../assets/images/scss.png'
 import bootstrap from '../../assets/images/bootstrap.png'
 import reactjs from '../../assets/images/reactjs.png'
 import hubsport from '../../assets/images/hubsport.png'
-
+import Siffra from '../../assets/images/Siffra.png'
+import Inymbus from '../../assets/images/Inymbus.png'
+import Pacarada from '../../assets/images/Pacarada.png'
+import Onyx from '../../assets/images/Onyx.png'
+import Digital from '../../assets/images/Digital.png'
+import Coventic from '../../assets/images/Coventic.png'
 
 
 export default function Brand() {
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+    });
+    const [errors, setErrors] = useState({});
+    const [success, setSuccess] = useState(false);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    const validateForm = () => {
+        const newErrors = {};
+        if (!formData.name.trim()) newErrors.name = 'Name is required';
+        if (!formData.email.trim()) {
+            newErrors.email = 'Email is required';
+        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+            newErrors.email = 'Invalid email address';
+        }
+        if (!formData.message.trim()) newErrors.message = 'Message is required';
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (validateForm()) {
+            sendEmail(formData);
+        }
+    };
+
+    const sendEmail = async (formData) => {
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setSuccess(true);
+                setFormData({ name: '', email: '', phone: '', message: '' });
+                setErrors({});
+            } else {
+                alert('Failed to send message. Please try again later.');
+            }
+        } catch (error) {
+            console.error('Error sending email:', error);
+        }
+    };
 
     return (
         <main className='banner-main-wapper'>
@@ -118,13 +177,182 @@ export default function Brand() {
                     </Row>
                 </Container>
             </section>
-            <section className='banner-about-section py-5'>
+            <section className='banner-about-section py-5 mb-5'>
                 <Container>
                     <Row className='g-5'>
                         <Col lg={12}>
                             <div className='d-flex justify-content-center mb-5'>
                                 <p className='text-border-desing font-Montserrat font-w6'>PROJECT</p>
                             </div>
+                        </Col>
+                        <Col lg={4}>
+                            <div class="work-card space-y-10">
+                                <div class="work-card-header img-responsive">
+                                    <a href="https://siffra.com" target="_blank" rel="noopener noreferrer">
+                                        <img src={Siffra} alt="Siffra Logo" />
+                                    </a>
+                                </div>
+                                <div class="">
+                                    <p className='font-gray font-w6 font-Raleway py-3 m-0'>Online eCommerce store to sell products of different categories to local people.</p>
+                                    <ul class="space-y-10 list-unstyled list-inline mb-0">
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">HTML</li>
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">CSS</li>
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">REACT-JS</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col lg={4}>
+                            <div class="work-card space-y-10">
+                                <div class="work-card-header img-responsive">
+                                    <a href="https://www.inymbus.com/" target="_blank" rel="noopener noreferrer">
+                                        <img src={Inymbus} alt="" />
+                                    </a>
+                                </div>
+                                <div class="">
+                                    <p className='font-gray font-w6 font-Raleway py-3 m-0'>Online eCommerce store to sell products of different categories to local people.</p>
+                                    <ul class="space-y-10 list-unstyled list-inline mb-0">
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">HTML</li>
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">CSS</li>
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">HUBSPORT</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col lg={4}>
+                            <div class="work-card space-y-10">
+                                <div class="work-card-header img-responsive">
+                                    <a href="http://pacarda.smartweb-tech.com/" target="_blank" rel="noopener noreferrer">
+                                        <img src={Pacarada} alt="" />
+                                    </a>
+                                </div>
+                                <div class="">
+                                    <p className='font-gray font-w6 font-Raleway py-3 m-0'>Online eCommerce store to sell products of different categories to local people.</p>
+                                    <ul class="space-y-10 list-unstyled list-inline mb-0">
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">HTML</li>
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">CSS</li>
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">WORDPRESS</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col lg={4}>
+                            <div class="work-card space-y-10">
+                                <div class="work-card-header img-responsive">
+                                    <a href="https://onyxhookah.com/" target="_blank" rel="noopener noreferrer">
+                                        <img src={Onyx} alt="" />
+                                    </a>
+                                </div>
+                                <div class="">
+                                    <p className='font-gray font-w6 font-Raleway py-3 m-0'>Online eCommerce store to sell products of different categories to local people.</p>
+                                    <ul class="space-y-10 list-unstyled list-inline mb-0">
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">HTML</li>
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">CSS</li>
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">BOOTSTRAP</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col lg={4}>
+                            <div class="work-card space-y-10">
+                                <div class="work-card-header img-responsive">
+                                    <a href="https://vercel-project-ten-swart.vercel.app" target="_blank" rel="noopener noreferrer">
+                                        <img src={Digital} alt="" />
+                                    </a>
+                                </div>
+                                <div class="">
+                                    <p className='font-gray font-w6 font-Raleway py-3 m-0'>Online eCommerce store to sell products of different categories to local people.</p>
+                                    <ul class="space-y-10 list-unstyled list-inline mb-0">
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">HTML</li>
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">CSS</li>
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">REACT-JS</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col lg={4}>
+                            <div class="work-card space-y-10">
+                                <div class="work-card-header img-responsive">
+                                    <a href="https://animation-live.vercel.app" target="_blank" rel="noopener noreferrer">
+                                        <img src={Coventic} alt="" />
+                                    </a>
+                                </div>
+                                <div class="">
+                                    <p className='font-gray font-w6 font-Raleway py-3 m-0'>Online eCommerce store to sell products of different categories to local people.</p>
+                                    <ul class="space-y-10 list-unstyled list-inline mb-0">
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">HTML</li>
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">CSS</li>
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">BOOTSTRAP</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+            <section className='banner-about-section py-5'>
+                <Container>
+                    <Row className='g-5'>
+                        <Col lg={12}>
+                            <div className='d-flex justify-content-center mb-5'>
+                                <p className='text-border-desing font-Montserrat font-w6'>CONTACT</p>
+                            </div>
+                        </Col>
+                        <Col md={{ span: 8, offset: 2 }}>
+                            <Form onSubmit={handleSubmit}>
+                                {success && <Alert variant="success">Your message has been sent successfully!</Alert>}
+
+                                <Form.Group className="mb-5" controlId="formName">
+                                    <Form.Control
+                                        type="text"
+                                        placeholder="ENTER YOUR NAME*"
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                        isInvalid={!!errors.name}
+                                    />
+                                    <Form.Control.Feedback type="invalid">{errors.name}</Form.Control.Feedback>
+                                </Form.Group>
+
+                                <Form.Group className="mb-5" controlId="formEmail">
+                                    <Form.Control
+                                        type="email"
+                                        placeholder="ENTER YOUR EMAIL*"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        isInvalid={!!errors.email}
+                                    />
+                                    <Form.Control.Feedback type="invalid">{errors.email}</Form.Control.Feedback>
+                                </Form.Group>
+
+                                <Form.Group className="mb-5" controlId="formPhone">
+                                    <Form.Control
+                                        type="text"
+                                        placeholder="PHONE NUMBER"
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleChange}
+                                    />
+                                </Form.Group>
+
+                                <Form.Group className="mb-5" controlId="formMessage">
+                                    <Form.Control
+                                        as="textarea"
+                                        rows={3}
+                                        placeholder="YOUR MESSAGE*"
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        isInvalid={!!errors.message}
+                                    />
+                                    <Form.Control.Feedback type="invalid">{errors.message}</Form.Control.Feedback>
+                                </Form.Group>
+
+                                <div className='text-center'>
+                                    <button type="submit" className='submit-btn'>SUBMIT</button>
+                                </div>
+                            </Form>
                         </Col>
                     </Row>
                 </Container>
