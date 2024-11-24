@@ -238,3 +238,16 @@ body {
   border-top: 3px solid #000 !important;
   border-bottom: 3px solid #000 !important;
 }
+
+.fade-message {
+  animation: fadeOut 3s forwards; /* 3 seconds fade-out animation */
+}
+
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}

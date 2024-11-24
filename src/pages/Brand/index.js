@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import emailjs from 'emailjs-com';
 import { Container, Form, Col, Row, Alert } from 'react-bootstrap';
 import code from '../../assets/images/18941-Photoroom.png'
 import desing from '../../assets/images/desing.png'
@@ -47,30 +48,30 @@ export default function Brand() {
         return Object.keys(newErrors).length === 0;
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (validateForm()) {
-            sendEmail(formData);
-        }
-    };
+        if (!validateForm()) return;
 
-    const sendEmail = async (formData) => {
         try {
-            const response = await fetch('/api/send-email', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
-            });
+            await emailjs.send(
+                'service_fcf3tdf',      // Replace with your EmailJS service ID
+                'template_h6yfadk',     // Replace with your EmailJS template ID
+                {
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone,
+                    message: formData.message,
+                },
+                'lWGEA6kgJfhw34aEH'       // Replace with your EmailJS public key
+            );
 
-            if (response.ok) {
-                setSuccess(true);
-                setFormData({ name: '', email: '', phone: '', message: '' });
-                setErrors({});
-            } else {
-                alert('Failed to send message. Please try again later.');
-            }
+            setSuccess(true);
+            setFormData({ name: '', email: '', phone: '', message: '' }); // Reset form
+            setTimeout(() => setSuccess(false), 3000);
+            setErrors({});
         } catch (error) {
-            console.error('Error sending email:', error);
+            console.error('Failed to send email:', error);
+            alert('Something went wrong. Please try again.');
         }
     };
 
@@ -300,7 +301,7 @@ export default function Brand() {
                         </Col>
                         <Col md={{ span: 8, offset: 2 }}>
                             <Form onSubmit={handleSubmit}>
-                                {success && <Alert variant="success">Your message has been sent successfully!</Alert>}
+                                {success && <Alert variant="success" className='fade-message'>Your message has been sent successfully!</Alert>}
 
                                 <Form.Group className="mb-5" controlId="formName">
                                     <Form.Control
