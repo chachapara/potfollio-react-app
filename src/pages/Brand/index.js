@@ -98,7 +98,7 @@ export default function Brand() {
                     <Row className='g-5 justify-content-center'>
                         <Col lg={12}>
                             <div className='d-flex justify-content-center'>
-                                <p className='text-border-desing font-Montserrat font-w6'>ABOUT</p>
+                                <p id='About' className='text-border-desing font-Montserrat font-w6'>ABOUT</p>
                             </div>
                         </Col>
                         <Col lg={6}>
@@ -136,7 +136,7 @@ export default function Brand() {
                     <Row className='g-5'>
                         <Col lg={12}>
                             <div className='d-flex justify-content-center mb-5'>
-                                <p className='text-border-desing font-Montserrat font-w6'>SKILLS</p>
+                                <p id='Skills' className='text-border-desing font-Montserrat font-w6'>SKILLS</p>
                             </div>
                         </Col>
                         <Col lg={4}>
@@ -183,7 +183,7 @@ export default function Brand() {
                     <Row className='g-5'>
                         <Col lg={12}>
                             <div className='d-flex justify-content-center mb-5'>
-                                <p className='text-border-desing font-Montserrat font-w6'>PROJECT</p>
+                                <p id='Project' className='text-border-desing font-Montserrat font-w6'>PROJECT</p>
                             </div>
                         </Col>
                         <Col lg={4}>
@@ -194,7 +194,7 @@ export default function Brand() {
                                     </a>
                                 </div>
                                 <div class="">
-                                    <p className='font-gray font-w6 font-Raleway py-3 m-0'>Online eCommerce store to sell products of different categories to local people.</p>
+                                    <p className='font-gray font-w6 font-Raleway py-3 m-0'>various categories of electric vehicles (EVs) online.</p>
                                     <ul class="space-y-10 list-unstyled list-inline mb-0">
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">HTML</li>
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">CSS</li>
@@ -211,7 +211,7 @@ export default function Brand() {
                                     </a>
                                 </div>
                                 <div class="">
-                                    <p className='font-gray font-w6 font-Raleway py-3 m-0'>Online eCommerce store to sell products of different categories to local people.</p>
+                                    <p className='font-gray font-w6 font-Raleway py-3 m-0'>Automated Deduction Management Software: iNymbus.</p>
                                     <ul class="space-y-10 list-unstyled list-inline mb-0">
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">HTML</li>
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">CSS</li>
@@ -228,7 +228,7 @@ export default function Brand() {
                                     </a>
                                 </div>
                                 <div class="">
-                                    <p className='font-gray font-w6 font-Raleway py-3 m-0'>Online eCommerce store to sell products of different categories to local people.</p>
+                                    <p className='font-gray font-w6 font-Raleway py-3 m-0'>construction and contractor websites to explore innovative designs and layouts.</p>
                                     <ul class="space-y-10 list-unstyled list-inline mb-0">
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">HTML</li>
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">CSS</li>
@@ -245,7 +245,7 @@ export default function Brand() {
                                     </a>
                                 </div>
                                 <div class="">
-                                    <p className='font-gray font-w6 font-Raleway py-3 m-0'>Online eCommerce store to sell products of different categories to local people.</p>
+                                    <p className='font-gray font-w6 font-Raleway py-3 m-0'>Online eCommerce store to sell products of base template.</p>
                                     <ul class="space-y-10 list-unstyled list-inline mb-0">
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">HTML</li>
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">CSS</li>
@@ -262,7 +262,7 @@ export default function Brand() {
                                     </a>
                                 </div>
                                 <div class="">
-                                    <p className='font-gray font-w6 font-Raleway py-3 m-0'>Online eCommerce store to sell products of different categories to local people.</p>
+                                    <p className='font-gray font-w6 font-Raleway py-3 m-0'>digitalization and technology, featuring detailed insights and innovative solutions.</p>
                                     <ul class="space-y-10 list-unstyled list-inline mb-0">
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">HTML</li>
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">CSS</li>
@@ -279,7 +279,7 @@ export default function Brand() {
                                     </a>
                                 </div>
                                 <div class="">
-                                    <p className='font-gray font-w6 font-Raleway py-3 m-0'>Online eCommerce store to sell products of different categories to local people.</p>
+                                    <p className='font-gray font-w6 font-Raleway py-3 m-0'>A straightforward project designed for practice and skill development.</p>
                                     <ul class="space-y-10 list-unstyled list-inline mb-0">
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">HTML</li>
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">CSS</li>
@@ -296,7 +296,7 @@ export default function Brand() {
                     <Row className='g-5'>
                         <Col lg={12}>
                             <div className='d-flex justify-content-center mb-5'>
-                                <p className='text-border-desing font-Montserrat font-w6'>CONTACT</p>
+                                <p id='contact' className='text-border-desing font-Montserrat font-w6'>CONTACT</p>
                             </div>
                         </Col>
                         <Col md={{ span: 8, offset: 2 }}>
