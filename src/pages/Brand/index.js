@@ -81,8 +81,8 @@ export default function Brand() {
                 <Container>
                     <Row className='align-items-center'>
                         <Col lg={6}>
-                            <h3 className='font-size-min font-black font-w6 font-Raleway'>Hi, I am</h3>
-                            <h1 className='font-size-big font-black font-w6 font-Raleway'>Sagar Chachapara</h1>
+                            <h3 className='font-size-min msg-text font-black font-w6 font-Raleway'>Hi, I am</h3>
+                            <h1 className='font-size-big text-responsive font-black font-w6 font-Raleway'>Sagar Chachapara</h1>
                             <p className='font-gray font-w7 font-size-small font-Raleway'>Front-end Developer / UI Designer</p>
                         </Col>
                         <Col lg={6}>
@@ -103,7 +103,7 @@ export default function Brand() {
                         </Col>
                         <Col lg={6}>
                             <div className='border-card p-4 border-r mt-5'>
-                                <div className='d-flex align-items-center pb-3'>
+                                <div className='d-flex align-items-center flex-wrap pb-3'>
                                     <img src={desing} alt="" />
                                     <p className='font-Montserrat font-w6 about-fomt font-black letter-spacing m-0 ms-2'>DESIGN</p>
                                 </div>
@@ -111,8 +111,8 @@ export default function Brand() {
                             </div>
                         </Col>
                         <Col lg={6}>
-                            <div className='border-card p-4 border-r mt-5'>
-                                <div className='d-flex align-items-center pb-3'>
+                            <div className='border-card p-4 border-r mt-md-5'>
+                                <div className='d-flex align-items-center flex-wrap pb-3'>
                                     <img src={maintenance} alt="" />
                                     <p className='font-Montserrat font-w6 about-fomt font-black letter-spacing m-0 ms-2'>DEVELOPMENT</p>
                                 </div>
@@ -121,7 +121,7 @@ export default function Brand() {
                         </Col>
                         <Col lg={6}>
                             <div className='border-card p-4 border-r'>
-                                <div className='d-flex align-items-center pb-3'>
+                                <div className='d-flex align-items-center flex-wrap pb-3'>
                                     <img src={setting} alt="" />
                                     <p className='font-Montserrat font-w6 about-fomt font-black letter-spacing m-0 ms-2'>MAINTENANCE</p>
                                 </div>
@@ -198,7 +198,7 @@ export default function Brand() {
                                     <ul class="space-y-10 list-unstyled list-inline mb-0">
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">HTML</li>
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">CSS</li>
-                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">REACT-JS</li>
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing last-link">REACT-JS</li>
                                     </ul>
                                 </div>
                             </div>
@@ -215,7 +215,7 @@ export default function Brand() {
                                     <ul class="space-y-10 list-unstyled list-inline mb-0">
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">HTML</li>
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">CSS</li>
-                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">HUBSPORT</li>
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing last-link">HUBSPORT</li>
                                     </ul>
                                 </div>
                             </div>
@@ -232,7 +232,7 @@ export default function Brand() {
                                     <ul class="space-y-10 list-unstyled list-inline mb-0">
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">HTML</li>
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">CSS</li>
-                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">WORDPRESS</li>
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing last-link">WORDPRESS</li>
                                     </ul>
                                 </div>
                             </div>
@@ -249,7 +249,7 @@ export default function Brand() {
                                     <ul class="space-y-10 list-unstyled list-inline mb-0">
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">HTML</li>
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">CSS</li>
-                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">BOOTSTRAP</li>
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing last-link">BOOTSTRAP</li>
                                     </ul>
                                 </div>
                             </div>
@@ -266,7 +266,7 @@ export default function Brand() {
                                     <ul class="space-y-10 list-unstyled list-inline mb-0">
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">HTML</li>
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">CSS</li>
-                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">REACT-JS</li>
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing last-link">REACT-JS</li>
                                     </ul>
                                 </div>
                             </div>
@@ -283,7 +283,7 @@ export default function Brand() {
                                     <ul class="space-y-10 list-unstyled list-inline mb-0">
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">HTML</li>
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">CSS</li>
-                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing">BOOTSTRAP</li>
+                                        <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing last-link">BOOTSTRAP</li>
                                     </ul>
                                 </div>
                             </div>
