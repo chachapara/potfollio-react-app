@@ -18,6 +18,9 @@ body {
 .navbar {
   background-color: #efefef;
   border-bottom: 1px solid #dfdfdf;
+  position: sticky;
+  top: 0;
+  z-index: 99;
 }
 
 .font-w1 {
