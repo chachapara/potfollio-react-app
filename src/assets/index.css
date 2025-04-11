@@ -244,6 +244,9 @@ body {
   animation: fadeOut 3s forwards; /* 3 seconds fade-out animation */
 }
 
+.swiper-slide{
+  height: auto !important;
+}
 @keyframes fadeOut {
   0% {
       opacity: 1;

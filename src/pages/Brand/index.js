@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
-import { Container, Form, Col, Row, Alert } from 'react-bootstrap';
+import { Container, Form, Col, Row, Alert, Accordion } from 'react-bootstrap';
 import code from '../../assets/images/18941-Photoroom.png'
 import desing from '../../assets/images/desing.png'
 import maintenance from '../../assets/images/maintenance.png'
@@ -17,6 +17,15 @@ import Pacarada from '../../assets/images/Pacarada.png'
 import Onyx from '../../assets/images/Onyx.png'
 import Digital from '../../assets/images/Digital.png'
 import Coventic from '../../assets/images/Coventic.png'
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+// import required modules
+import { Pagination, Autoplay } from 'swiper/modules';
 
 
 export default function Brand() {
@@ -286,6 +295,108 @@ export default function Brand() {
                                         <li class="list-inline-item border border-dark rounded-pill px-2 font-Montserrat font-w6 letter-spacing last-link">BOOTSTRAP</li>
                                     </ul>
                                 </div>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+            <section className='banner-about-section py-5 mb-5'>
+                <Container>
+                    <Row>
+                        <Col lg={12}>
+                            <div className='d-flex justify-content-center mb-5'>
+                                <p id='support' className='text-border-desing font-Montserrat font-w6'>SUPPORT</p>
+                            </div>
+                        </Col>
+                        <Col lg={12}>
+                            <div className='pb-3 pt-5'>
+                                <Swiper
+                                    slidesPerView={3}
+                                    spaceBetween={30}
+                                    pagination={{
+                                        clickable: true,
+                                    }}
+                                    autoplay={{
+                                        delay: 2500,
+                                        disableOnInteraction: false,
+                                    }}
+                                    breakpoints={{
+                                        0: {
+                                            slidesPerView: 1,
+                                            spaceBetween: 20,
+                                        },
+                                        640: {
+                                            slidesPerView: 2,
+                                            spaceBetween: 20,
+                                        },
+                                        768: {
+                                            slidesPerView: 3,
+                                            spaceBetween: 30,
+                                        },
+                                        1024: {
+                                            slidesPerView: 3,
+                                            spaceBetween: 30,
+                                        },
+                                    }}
+                                    modules={[Pagination, Autoplay]}
+                                    className="mySwiper"
+                                >
+                                    <SwiperSlide>
+                                        <div className='work-card h-100'>
+                                            <div className='mb-2'>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#0077cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square">
+                                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                                                </svg>
+                                            </div>
+                                            <h3>client feedback</h3>
+                                            <p className='m-0'>Quick responses and real-time help for your questions and issues.</p>
+                                        </div>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <div className='work-card h-100'>
+                                            <div className='mb-2'>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#0077cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lightbulb">
+                                                    <path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12v2h8v-2a7 7 0 0 0-4-12z" />
+                                                </svg>
+                                            </div>
+                                            <h3>Understanding of the issue</h3>
+                                            <p className='m-0'>I listen carefully to client concerns, ask the right questions, and analyze the root cause before providing any solution.</p>
+                                        </div>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <div className='work-card h-100'>
+                                            <div className='mb-2'>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#facc15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap">
+                                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                                                </svg>
+                                            </div>
+                                            <h3>Quick and Effective Responses</h3>
+                                            <p className='m-0'>Whether it's a bug, a feature request, or a usability concern I respond fast and offer clear, actionable help.</p>
+                                        </div>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <div className='work-card h-100'>
+                                            <div className='mb-2'>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-headphones">
+                                                    <path d="M3 18v-6a9 9 0 0 1 18 0v6M21 18a3 3 0 0 1-6 0M3 18a3 3 0 0 0 6 0" />
+                                                </svg>
+                                            </div>
+                                            <h3>Multiple Support Channels</h3>
+                                            <p className='m-0'>I offer support through live chat, email, and FAQs to make sure clients can reach me easily.</p>
+                                        </div>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <div className='work-card h-100'>
+                                            <div className='mb-2'>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tool">
+                                                    <path d="M14.7 6.3a4.5 4.5 0 0 1-6.4 6.4L3 21l-1-1 7.3-7.3a4.5 4.5 0 1 1 6.4-6.4z" />
+                                                </svg>
+                                            </div>
+                                            <h3>Post-Launch Support</h3>
+                                            <p className='m-0'>I continue to assist even after the project is delivered — helping with updates, improvements, and ongoing issues.</p>
+                                        </div>
+                                    </SwiperSlide>
+                                </Swiper>
                             </div>
                         </Col>
                     </Row>

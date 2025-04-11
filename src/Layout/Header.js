@@ -22,6 +22,9 @@ export default function Navs() {
                             <Nav.Link onClick={() => document.getElementById('Project').scrollIntoView({ behavior: 'smooth' })}>
                                 Project
                             </Nav.Link>
+                            <Nav.Link onClick={() => document.getElementById('support').scrollIntoView({ behavior: 'smooth' })}>
+                                support
+                            </Nav.Link>
                         </Nav>
                         <Nav.Link onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
                             <button className='contect-btn'>CONTACT ME</button>
