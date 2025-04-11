@@ -300,11 +300,11 @@ export default function Brand() {
                     </Row>
                 </Container>
             </section>
-            <section className='banner-about-section py-5 mb-5'>
+            <section className='banner-about-section py-5 mb-lg-5'>
                 <Container>
                     <Row>
                         <Col lg={12}>
-                            <div className='d-flex justify-content-center mb-5'>
+                            <div className='d-flex justify-content-center mb-lg-5'>
                                 <p id='support' className='text-border-desing font-Montserrat font-w6'>SUPPORT</p>
                             </div>
                         </Col>
