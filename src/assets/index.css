@@ -247,9 +247,18 @@ body {
   animation: fadeOut 3s forwards; /* 3 seconds fade-out animation */
 }
 
+.navbar-expand-lg{
+  align-items: center;
+}
+
 .swiper-slide{
   height: auto !important;
 }
+
+.navbar-expand-lg .navbar-nav{
+  align-items: center !important;
+}
+
 @keyframes fadeOut {
   0% {
       opacity: 1;

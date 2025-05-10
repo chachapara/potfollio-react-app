@@ -1,17 +1,25 @@
 import { Link } from 'react-scroll';
-import { Container, Navbar, Nav, Button, } from 'react-bootstrap';
+import { Container, Navbar, Nav, Offcanvas } from 'react-bootstrap';
 import logo from '../assets/images/sagar-logo.png'
 export default function Navs() {
 
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" className="">
-                <Container>
-                    <Navbar.Brand href="#home">
-                        <img src={logo} alt="" />
-                    </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav">
+            <Navbar expand="lg" className="">
+            <Container>
+                <Navbar.Brand href="#home">
+                    <img src={logo} alt="" />
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="offcanvasNavbar" />
+                <Navbar.Offcanvas
+                    id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel"
+                    placement="end" // this makes it slide in from the right
+                >
+                    <Offcanvas.Header closeButton>
+                        <Offcanvas.Title id="offcanvasNavbarLabel">Menu</Offcanvas.Title>
+                    </Offcanvas.Header>
+                    <Offcanvas.Body>
                         <Nav className="ms-auto">
                             <Nav.Link onClick={() => document.getElementById('About').scrollIntoView({ behavior: 'smooth' })}>
                                 About
@@ -23,15 +31,16 @@ export default function Navs() {
                                 Project
                             </Nav.Link>
                             <Nav.Link onClick={() => document.getElementById('support').scrollIntoView({ behavior: 'smooth' })}>
-                                support
+                                Support
+                            </Nav.Link>
+                            <Nav.Link onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
+                                <button className='contect-btn'>CONTACT ME</button>
                             </Nav.Link>
                         </Nav>
-                        <Nav.Link onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
-                            <button className='contect-btn'>CONTACT ME</button>
-                        </Nav.Link>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar >
+                    </Offcanvas.Body>
+                </Navbar.Offcanvas>
+            </Container>
+        </Navbar>
         </>
     )
 }
